@@ -32,3 +32,5 @@ jobs:
           github-token: ${{ secrets.PERSONAL_TOKEN }}
           from-name: <YOUR TOOL>
           to-name: test
+          paths-ignore: |
+            .github/workflows/*.yml
