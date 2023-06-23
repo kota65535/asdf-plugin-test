@@ -39,7 +39,7 @@ jobs:
           test ! -d template/
           grep "Apache" LICENSE
           test "main" = "$(git rev-parse --abbrev-ref HEAD)"
-          ! git grep -F -e "<YOUR TOOL>" \
+          ! git grep -F -e "test" \
                    --or -e "<TOOL HOMEPAGE>" \
                    --or -e "<TOOL REPO>" \
                    --or -e "<TOOL CHECK>" \
