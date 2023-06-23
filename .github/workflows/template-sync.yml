@@ -38,3 +38,5 @@ jobs:
           from-name: <YOUR TOOL>
           to-name: test
           pr-base-branch: template-rename
+          paths-ignore: |
+            .github/workflows/*.yml
