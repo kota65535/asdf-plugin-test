@@ -33,6 +33,7 @@ jobs:
         id: sync
         with:
           github-token: ${{ secrets.PERSONAL_TOKEN }}
+          template-branch: update
           rename: true
           from-name: <YOUR TOOL>
           to-name: test
