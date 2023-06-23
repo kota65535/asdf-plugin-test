@@ -1,0 +1,39 @@
+name: Template sync
+
+on:
+  workflow_dispatch:
+
+permissions: write-all
+
+jobs:
+  get-context:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Show github context object
+        run: echo $JSON
+        env:
+          JSON: ${{ toJSON(github) }}
+
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      pr-branch: ${{ steps.sync.outputs.pr-branch }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Configure git
+        uses: kota65535/github-git-config-action@main
+        with:
+          user.name: github-actions[bot]
+          user.email: 41898282+github-actions[bot]@users.noreply.github.com
+      - name: Sync template
+        uses: kota65535/github-template-sync-action@main
+        id: sync
+        with:
+          github-token: ${{ secrets.PERSONAL_TOKEN }}
+          rename: true
+          from-name: <YOUR TOOL>
+          to-name: test
+          pr-base-branch: template-rename
