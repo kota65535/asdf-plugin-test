@@ -34,3 +34,12 @@ jobs:
           to-name: test
           paths-ignore: |
             .github/workflows/*.yml
+      - name: Rename project
+        uses: kota65535/github-template-rename-action@main
+        with:
+          github-token: ${{ secrets.PERSONAL_TOKEN }}
+          paths-ignore: |
+            .github/workflows/*.yml
+          pr-title: Template rename 2
+          pr-base-branch: template-rename-2
+          pr-labels: template
