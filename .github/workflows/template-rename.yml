@@ -41,5 +41,5 @@ jobs:
           paths-ignore: |
             .github/workflows/*.yml
           pr-title: Template rename 2
-          pr-base-branch: template-rename-2
+          pr-branch: template-rename-2
           pr-labels: template
