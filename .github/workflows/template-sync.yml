@@ -58,6 +58,7 @@ jobs:
         id: sync
         with:
           github-token: ${{ secrets.PERSONAL_TOKEN }}
+          rename: true
           paths-ignore: |
             .github/workflows/*.yml
           pr-title: Template sync 2
