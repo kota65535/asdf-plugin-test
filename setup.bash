@@ -172,7 +172,7 @@ setup_github() {
 			download_license "$license_keyword" "$out/LICENSE"
 			sed -i '1s;^;TODO: INSERT YOUR NAME & COPYRIGHT YEAR (if applicable to your license)\n;g' "$out/LICENSE"
 
-			set_placeholder "<YOUR TOOL>" "$tool_name" "$out"
+			set_placeholder "test" "$tool_name" "$out"
 			set_placeholder "<TOOL HOMEPAGE>" "$tool_homepage" "$out"
 			set_placeholder "<TOOL REPO>" "$tool_repo" "$out"
 			set_placeholder "<TOOL CHECK>" "$check_command" "$out"
@@ -263,7 +263,7 @@ setup_gitlab() {
 
 			download_license "$license_keyword" "$out/LICENSE"
 
-			set_placeholder "<YOUR TOOL>" "$tool_name" "$out"
+			set_placeholder "test" "$tool_name" "$out"
 			set_placeholder "<TOOL HOMEPAGE>" "$tool_homepage" "$out"
 			set_placeholder "<TOOL REPO>" "$tool_repo" "$out"
 			set_placeholder "<TOOL CHECK>" "$check_command" "$out"
