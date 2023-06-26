@@ -1,8 +1,8 @@
 <div align="center">
 
-# asdf-<YOUR TOOL> ![Build Status](https://gitlab.com/<YOUR GITLAB USERNAME>/asdf-<YOUR TOOL>/badges/<PRIMARY BRANCH>/pipeline.svg)
+# asdf-test ![Build Status](https://gitlab.com/<YOUR GITLAB USERNAME>/asdf-test/badges/<PRIMARY BRANCH>/pipeline.svg)
 
-[<YOUR TOOL>](<TOOL HOMEPAGE>) plugin for the [asdf version manager](https://asdf-vm.com).
+[test](<TOOL HOMEPAGE>) plugin for the [asdf version manager](https://asdf-vm.com).
 
 </div>
 
@@ -25,24 +25,24 @@
 Plugin:
 
 ```shell
-asdf plugin add <YOUR TOOL>
+asdf plugin add test
 # or
-asdf plugin add https://gitlab.com/<YOUR GITLAB USERNAME>/asdf-<YOUR TOOL>.git
+asdf plugin add https://gitlab.com/<YOUR GITLAB USERNAME>/asdf-test.git
 ```
 
-<YOUR TOOL>:
+test:
 
 ```shell
 # Show all installable versions
-asdf list-all <YOUR TOOL>
+asdf list-all test
 
 # Install specific version
-asdf install <YOUR TOOL> latest
+asdf install test latest
 
 # Set a version globally (on your ~/.tool-versions file)
-asdf global <YOUR TOOL> latest
+asdf global test latest
 
-# Now <YOUR TOOL> commands are available
+# Now test commands are available
 <TOOL CHECK>
 ```
 
@@ -53,7 +53,7 @@ install & manage versions.
 
 Contributions of any kind welcome! See the [contributing guide](contributing.md).
 
-[Thanks goes to these contributors](https://gitlab.com/<YOUR GITLAB USERNAME>/asdf-<YOUR TOOL>/-/graphs/<PRIMARY BRANCH>)!
+[Thanks goes to these contributors](https://gitlab.com/<YOUR GITLAB USERNAME>/asdf-test/-/graphs/<PRIMARY BRANCH>)!
 
 # License
 
