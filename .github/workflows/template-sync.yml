@@ -30,13 +30,19 @@ jobs:
           user.email: 41898282+github-actions[bot]@users.noreply.github.com
       - name: Sync template
         uses: kota65535/github-template-sync-action@main
-        id: sync
+        id: sync1
         with:
           github-token: ${{ secrets.PERSONAL_TOKEN }}
           template-branch: update
           rename: true
-          from-name: <YOUR TOOL>
+          from-name: <YOUR-TOOL>
           to-name: test
-          pr-base-branch: template-rename
+          paths-ignore: |
+            .github/workflows/*.yml
+      - name: Sync template
+        uses: kota65535/github-template-sync-action@main
+        id: sync2
+        with:
+          github-token: ${{ secrets.PERSONAL_TOKEN }}
           paths-ignore: |
             .github/workflows/*.yml
